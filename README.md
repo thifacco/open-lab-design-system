@@ -1,6 +1,10 @@
 # Open Lab Design System
 Design System desenvolvido com Figma e React
 
+<p align="center">
+  <img src="public/storybook.png"  alt="Storybook" />
+</p>
+
 ## Instalar as dependências
 
 ```
