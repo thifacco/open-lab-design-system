@@ -1,53 +1,13 @@
 import { Meta, StoryObj } from '@storybook/react';
-import { Heading, HeadingProps } from './Heading';
+import { Button, ButtonProps } from './Button';
 
 export default {
-  title: 'Components/Heading',
-  component: Heading,
+  title: 'Components/Button',
+  component: Button,
   args: {
-    children: 'Lorem ipsum.'
+    children: 'Create account'
   },
-  argTypes: {
-    size: {
-      options: ['sm', 'md', 'lg'],
-      control: {
-        type: 'inline-radio'
-      }
-    }
-  }
-} as Meta<HeadingProps>
+  argTypes: {}
+} as Meta<ButtonProps>
 
-export const Default: StoryObj<HeadingProps> = {}
-
-export const Small: StoryObj<HeadingProps> = {
-  args: {
-    size: 'sm'
-  }
-}
-
-export const Large: StoryObj<HeadingProps> = {
-  args: {
-    size: 'lg'
-  }
-}
-
-export const CustomComponent: StoryObj<HeadingProps> = {
-  args: {
-    asChild: true,
-    children: (
-      <h1>Heading with H1</h1>
-    )
-  },
-  argTypes: {
-    children: {
-      table: {
-        disable: true
-      }
-    },
-    asChild: {
-      table: {
-        disable: true
-      }
-    }
-  }
-}
+export const Default: StoryObj<ButtonProps> = {}

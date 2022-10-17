@@ -13,13 +13,14 @@ module.exports = {
       '2xl': 32,
     },
     colors: {
-      'black': '#000000',
+      'black': '#000',
+      'white': '#FFF',
       'gray-900': '#121214',
       'gray-800': '#202024',
       'gray-400': '#7c7c8a',
       'gray-100': '#e1e1e6',
       'cyan-500': '#81b8f7',
-      'cyan-600': '#61dafb',
+      'cyan-300': '#61dafb',
     },
     extend: {
       fontFamily: {
