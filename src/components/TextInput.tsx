@@ -1,5 +1,5 @@
-import { clsx } from 'clsx';
 import { InputHTMLAttributes, ReactNode } from 'react';
+import { Slot } from '@radix-ui/react-slot';
 
 // InputHTMLAttributes<HTMLInputElement> = recebe todas as propriedades do HTML Input element
 export interface TextInputProps extends InputHTMLAttributes<HTMLInputElement> {}
@@ -16,7 +16,21 @@ function TextInputRoot(props: TextInputRootProps) {
   )
 }
 
-function TextInputIcon() {}
+TextInputRoot.displayName = 'TextInput.Root';
+
+export interface TextInputIconProps {
+  children: ReactNode
+}
+
+function TextInputIcon(props: TextInputIconProps) {
+  return (
+    <Slot className="w-6 h-6 text-gray-400">
+      {props.children}
+    </Slot>
+  )
+}
+
+TextInputIcon.displayName = 'TextInput.Icon';
 
 export interface TextInputInputProps extends InputHTMLAttributes<HTMLInputElement> {}
 
@@ -28,6 +42,8 @@ export function TextInputInput(props: TextInputInputProps) {
     />
   )
 }
+
+TextInputInput.displayName = 'TextInput.Input';
 
 export const TextInput = {
   Root: TextInputRoot,
